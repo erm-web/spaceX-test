@@ -1,0 +1,16 @@
+.mainBgBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.bgItemBlur {
+  width: 100%;
+  flex: 1;
+  background-color: #04121f;
+  z-index: 2;
+  box-shadow: 4px -18px 26px 6px rgb(4, 18, 31);
+}

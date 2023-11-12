@@ -1,0 +1,38 @@
+.box {
+  padding: 0 14px 0 27px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--nav-border);
+  border-right: 1px solid var(--nav-border);
+  height: 100%;
+  position: relative;
+}
+.logoItemsBorder {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+}
+.box div:first-of-type {
+  left: -1px;
+  top: -1px;
+}
+.second {
+  right: -1px;
+  top: -1px;
+  transform: rotate(90deg);
+}
+.third {
+  bottom: -1px;
+  right: -1px;
+  transform: rotate(180deg);
+}
+.box div:last-of-type {
+  transform: rotate(-90deg);
+  bottom: -1px;
+  left: -1px;
+}
+
+@media (max-width: 1013px) {
+}

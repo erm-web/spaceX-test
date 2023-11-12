@@ -1,0 +1,62 @@
+html {
+  font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 380px) / (1400 * 2)));
+}
+body {
+  background-color: var(--bg-body);
+  overflow-x: hidden;
+  color: var(--body-color);
+  font-family: 'museoSansCyrl';
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+}
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.App header {
+  z-index: 2;
+  margin: 0 auto;
+  background-color: var(--nav-bg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--nav-border);
+}
+.App main {
+  flex: 1;
+  background-color: transparent;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.App footer {
+  background-color: transparent;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mainSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+}
+@media (max-width: 1170px) {
+  .container {
+    padding-left: 5px;
+  }
+}

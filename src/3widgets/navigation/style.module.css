@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  column-gap: 40px;
+  font-size: 16px;
+  position: relative;
+}
+.NavLinks {
+  color: var(--body-color);
+  letter-spacing: -0.25px;
+  position: relative;
+}
+@media (hover: hover) {
+  .NavLinks:hover {
+    opacity: 0.7;
+  }
+}
+.accentElement {
+  height: 1px;
+  background-color: #3b3b3b;
+  position: absolute;
+  top: 20px;
+  transition: all 0.4s;
+}

@@ -1,0 +1,114 @@
+.buttonAccent {
+  padding: 10px 24px;
+  font-weight: 100;
+  background-color: var(--accent-element);
+  color: var(--body-color);
+  position: relative;
+  border: solid 1px white;
+  font-size: 14px;
+}
+.border {
+  position: absolute;
+  background-color: red;
+}
+.top {
+  width: calc(100% + 2px);
+  height: 1px;
+  left: -1px;
+  top: -1px;
+  background: linear-gradient(90deg, rgba(0, 25, 41, 1) 15%, rgba(0, 212, 255, 1) 100%);
+}
+.bottom {
+  width: calc(100% + 2px);
+  height: 1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(270deg, rgba(0, 25, 41, 1) 15%, rgba(0, 212, 255, 1) 100%);
+}
+.left {
+  left: -1px;
+  height: calc(100% + 1px);
+  width: 1px;
+  top: -1px;
+  background: linear-gradient(180deg, rgba(0, 25, 41, 1) 15%, rgba(0, 212, 255, 1) 100%);
+}
+.right {
+  right: -1px;
+  height: calc(100% + 1px);
+  width: 1px;
+  top: -1px;
+  background: linear-gradient(0deg, rgba(0, 25, 41, 1) 15%, rgba(0, 212, 255, 1) 100%);
+}
+.item {
+  position: absolute;
+  box-shadow: 0px 0px 10px 0.5px rgba(255, 255, 255, 0.863);
+}
+.leftItem {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  bottom: -1px;
+  left: -1px;
+  width: 1px;
+}
+.rightItem {
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  top: -1px;
+  right: -1px;
+}
+.gorizont {
+  width: 5px;
+  animation: ButtonAccentAnimationLeftInWidthRevers 1.3s;
+}
+.vertical {
+  height: 5px;
+  animation: ButtonAccentAnimationLeftInTopRevers 1.3s;
+
+  /* animation: ButtonAccentAnimationLeftInTop 1.3s backwards reverse; */
+}
+@keyframes ButtonAccentAnimationLeftInTop {
+  0% {
+    height: 5px;
+  }
+  100% {
+    height: calc(100% + 2px);
+  }
+}
+@keyframes ButtonAccentAnimationLeftInWidth {
+  0% {
+    width: 5px;
+  }
+  100% {
+    width: calc(100% + 2px);
+  }
+}
+@keyframes ButtonAccentAnimationLeftInTop {
+  0% {
+    height: 5px;
+  }
+  100% {
+    height: calc(100% + 2px);
+  }
+}
+@keyframes ButtonAccentAnimationLeftInTopRevers {
+  0% {
+    height: calc(100% + 2px);
+  }
+  100% {
+    height: 5px;
+  }
+}
+@keyframes ButtonAccentAnimationLeftInWidthRevers {
+  0% {
+    width: calc(100% + 2px);
+  }
+  100% {
+    width: 5px;
+  }
+}
+.buttonAccent:hover .vertical {
+  animation: ButtonAccentAnimationLeftInTop 1.3s forwards;
+}
+.buttonAccent:hover .gorizont {
+  animation: ButtonAccentAnimationLeftInWidth 1.3s forwards;
+}

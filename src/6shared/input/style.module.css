@@ -1,0 +1,8 @@
+.input {
+  padding: 5px;
+  font-size: 16px;
+  color: var(--body-color);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  backdrop-filter: blur(3px);
+}

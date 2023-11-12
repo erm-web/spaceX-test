@@ -141,11 +141,11 @@ export default function Navigation({ prop }) {
         return (
           <>
             <NavLink
+              key={elem.id}
               data-navlink
               style={{ opacity: !flag && 0, display: !flag && 'none' }}
               className={clsx(classes.NavLinks)}
               to={elem.href}
-              key={elem.id}
             >
               {elem.name}
             </NavLink>

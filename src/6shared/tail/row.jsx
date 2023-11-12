@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import classes from './style.module.css'
 import { InputAdminChange } from '../input'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Row({ index, children, isChange, value, adminOnChange }) {
   let variant = 'one'
@@ -24,7 +24,7 @@ export default function Row({ index, children, isChange, value, adminOnChange })
   }
   const variants = {
     one: (
-      <p data-row={key} key={index}>
+      <p style={{ zIndex: 1 }} data-row={key}>
         {!isChange ? (
           value
         ) : (
@@ -33,7 +33,7 @@ export default function Row({ index, children, isChange, value, adminOnChange })
       </p>
     ),
     two: (
-      <p data-row={key} key={index}>
+      <p style={{ zIndex: 1 }} data-row={key}>
         {!isChange
           ? [value[0], <span>{value[1]}</span>]
           : [

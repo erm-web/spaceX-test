@@ -20,4 +20,4 @@ export const LINKS_ADMIN = {
 export const LINK_API = {
   dev: 'http://localhost/test-api/serv/test.php',
   prod: '/serv/index.php',
-}['prod']
+}['dev']

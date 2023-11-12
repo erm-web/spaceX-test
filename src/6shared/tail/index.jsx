@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import classes from './style.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { InputAdminChange } from '../input'
 import { ChangeIcon } from '../icon'
 import Row from './row'
@@ -30,12 +30,11 @@ export default function Tail({ index, elem, admin, adminChange }) {
 
   useEffect(() => {
     setValueNow({
-      title: elem.title,
-      value: [elem.value.value, elem.value.add],
-      sub: elem.sub,
+      title: elem.title ?? '',
+      value: [elem.value.value, elem.value.add] ?? '',
+      sub: elem.sub ?? '',
     })
   }, [elem])
-
   function handleOnChange(e) {
     setValueNow((state) => {
       const key = e.target.dataset.key
@@ -65,9 +64,9 @@ export default function Tail({ index, elem, admin, adminChange }) {
       return variants
     })
   }
-
+  const idKey = useRef(crypto.randomUUID())
   return (
-    <div key={elem.id} className={clsx(classes.tail, classes[variant])}>
+    <div className={clsx(classes.tail, classes[variant])}>
       {admin && (
         <ChangeIcon
           onSave={() => adminChange({ id: elem.id, data: valueNow })}
@@ -78,6 +77,7 @@ export default function Tail({ index, elem, admin, adminChange }) {
       {Object.values(valueNow).map((element, index) => {
         return (
           <Row
+            key={idKey.current + index}
             index={index}
             isChange={isChange}
             value={element}

@@ -23,7 +23,7 @@ export const getNav = createAsyncThunk(
           ...accum,
           [elem.key]: {
             ...elem,
-            elem: elem.elem === 'Main' && <Main />,
+            elem: 'Main',
           },
         }
         return accum

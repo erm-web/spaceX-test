@@ -27,8 +27,15 @@ export default function InformationTails({ adminChange }) {
     <div className={clsx(classes.boxTails)}>
       {status !== 'pending' &&
         data.map((elem, index) => {
-          console.log(elem)
-          return <Tail index={index} elem={elem} admin={auth} adminChange={handleAdminChange} />
+          return (
+            <Tail
+              key={crypto.randomUUID()}
+              index={index}
+              elem={elem}
+              admin={auth}
+              adminChange={handleAdminChange}
+            />
+          )
         })}
     </div>
   )

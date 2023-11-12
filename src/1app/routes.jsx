@@ -16,7 +16,7 @@ export default function RoutesApp({ prop }) {
             case 'Main':
               return <Main />
             default:
-              return null
+              return <Main />
           }
         }
         return <Route key={index} path={elem.href} element={element()}></Route>

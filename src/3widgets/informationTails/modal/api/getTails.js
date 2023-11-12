@@ -15,7 +15,6 @@ export const getTails = createAsyncThunk(
         throw new Error('Fetch failed')
       }
       const dataReponse = await response.json()
-      console.log('dataReponse ------>', dataReponse)
       if (dataReponse.response === 'accept' && dataReponse) {
         const initArry = dataReponse.data
         let objects = []

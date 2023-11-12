@@ -24,7 +24,7 @@ export default function Row({ index, children, isChange, value, adminOnChange })
   }
   const variants = {
     one: (
-      <p style={{ zIndex: 1 }} data-row={key}>
+      <p style={{ zIndex: 3 }} data-row={key}>
         {!isChange ? (
           value
         ) : (
@@ -33,7 +33,7 @@ export default function Row({ index, children, isChange, value, adminOnChange })
       </p>
     ),
     two: (
-      <p style={{ zIndex: 1 }} data-row={key}>
+      <p style={{ zIndex: 3 }} data-row={key}>
         {!isChange
           ? [value[0], <span>{value[1]}</span>]
           : [

@@ -7,15 +7,15 @@ import Burger from '../../5entities/burger'
 import { useIsMobile } from '../../6shared/hooks'
 import { useSelector } from 'react-redux'
 import { useEffect, useRef } from 'react'
+import { nanoid } from 'nanoid'
 
 export default function Header({ prop }) {
   const isMobile = useSelector((store) => store.app.mobile)
   const idKey = useRef({
-    a: crypto.randomUUID(),
-    b: crypto.randomUUID(),
-    c: crypto.randomUUID(),
+    a: nanoid(),
+    b: nanoid(),
+    c: nanoid(),
   })
-
   return (
     <header>
       <div className={clsx('container')}>

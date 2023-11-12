@@ -18,7 +18,6 @@ export const getNav = createAsyncThunk(
       const dataReponse = await response.json()
       //из массива в obj, что бы были ключи
       const links = dataReponse.reduce((accum, elem) => {
-        console.log(elem)
         accum = {
           ...accum,
           [elem.key]: {
@@ -28,7 +27,6 @@ export const getNav = createAsyncThunk(
         }
         return accum
       }, {})
-      console.log(links)
       return { data: links }
     } catch (error) {
       return rejectWithValue(error.message)

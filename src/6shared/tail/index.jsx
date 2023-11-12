@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { InputAdminChange } from '../input'
 import { ChangeIcon } from '../icon'
 import Row from './row'
+import { nanoid } from '@reduxjs/toolkit'
 
 export default function Tail({ index, elem, admin, adminChange }) {
   let variant
@@ -64,7 +65,7 @@ export default function Tail({ index, elem, admin, adminChange }) {
       return variants
     })
   }
-  const idKey = useRef(crypto.randomUUID())
+  const idKey = useRef(nanoid())
   return (
     <div className={clsx(classes.tail, classes[variant])}>
       {admin && (

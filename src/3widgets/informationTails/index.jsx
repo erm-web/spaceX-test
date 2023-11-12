@@ -12,12 +12,9 @@ export default function InformationTails({ adminChange }) {
 
   useLayoutEffect(() => {
     dispatch(apiTails.getTails())
-    console.log(apiTails)
   }, [])
 
-  useEffect(() => {
-    console.log('datareset')
-  }, [data])
+  useEffect(() => {}, [data])
 
   function handleAdminChange({ id, data }) {
     //запрос на сервер для изменения полей.
@@ -29,7 +26,7 @@ export default function InformationTails({ adminChange }) {
         data.map((elem, index) => {
           return (
             <Tail
-              key={crypto.randomUUID()}
+              key={index}
               index={index}
               elem={elem}
               admin={auth}
